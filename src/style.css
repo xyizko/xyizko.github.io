@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* background-color: #020617; */
+  transition: all 300ms;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+h1 {
+  font-family: "Courgette";
+  font-size: 2.5rem;
+  background: linear-gradient(
+    90deg,
+    hsla(33, 100%, 53%, 1) 0%,
+    hsla(58, 100%, 68%, 1) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-align: center;
+}
+
+.form {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-box {
+  font-size: 2.2rem;
+  padding: 1.5rem;
+  border-radius: 50px;
+  font-family: courgette;
+  border: 1px solid;
+  text-align: center;
+  display: inline-block;
+  color: #f59e0b;
+  /*   background-color: #020617; */
+}
+
+.input-box:focus {
+  outline: 5px solid #16a34a;
+  color: #16a34a;
+  overflow: auto;
+  box-shadow: 1px 1px 500px 10px hsla(148, 93%, 45%, 0.546);
+}
+
+.result-box {
+  text-align: center;
+  background-color: #031512;
+  font-size: 3rem;
+  background-color: #031712;
+  padding: 2rem;
+  border: 2px solid #16a34a;
+  border-radius: 100px;
+}
+
+.image1 {
+  width: 40%;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.image1:hover {
+  width: 30%;
+  border-radius: 100px;
+  -webkit-box-shadow: 0px 0px 105px 45px rgba(45, 255, 196, 0.9);
+  -moz-box-shadow: 0px 0px 105px 45px rgba(45, 255, 196, 0.9);
+  box-shadow: 0px 0px 105px 45px rgba(45, 255, 196, 0.9);
+}
+.image1:active {
+  width: 80%;
+}
+
+.backgroundVideo {
+  position: fixed;
+  /* Ensures video stays fixed on screen */
+  top: 0;
+  left: 0;
+  /* Positions video at top left corner */
+  width: 100vw;
+  /* Stretches video to full viewport width */
+  height: 100vh;
+  /* Stretches video to full viewport height */
+  object-fit: cover;
+  /* Maintains video aspect ratio while filling container */
+  z-index: -1;
+  /* Positions video behind other content */
+  opacity: 1;
+  filter: brightness(90%) blur(5px);
+}
+
+.glow {
+  /* width: 100px; */
+  /* height: 100px; */
+  border-radius: 10%;
+  background-color: #fff;
+  -webkit-animation: glowing 1s ease-in-out infinite alternate;
+  -moz-animation: glowing 1s ease-in-out infinite alternate;
+  animation: glowing 1s ease-in-out infinite alternate;
+}
+@-webkit-keyframes glowing {
+  from {
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #f0f, 0 0 40px #0ff,
+      0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    box-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6,
+      0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+
+.wiggle {
+  animation: glowing 1s ease-in-out infinite alternate,
+    wiggle 3s ease-in-out infinite;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(5deg) scale(1.05);
+  }
+  50% {
+    transform: rotate(-5deg) scale(0.95);
+  }
+  75% {
+    transform: rotate(5deg) scale(1.05);
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+}
