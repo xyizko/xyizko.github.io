@@ -87,9 +87,14 @@ _________________¶111111¶¶_____________¶¶¶¶¶¶_____ -->
     <meta property="og:image:width" content="1024" />
     <meta property="og:image:height" content="1024" />
     <!-- OG Section End -->
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
   </head>
   <body>
-    <img class="image1 glow wiggle" src="./src/xyizko.jpg" alt="" />
+    <img
+      class="image1 glow wiggle btn--show-modal"
+      src="./src/xyizko.jpg"
+      alt=""
+    />
     <video autoplay loop muted class="backgroundVideo">
       <source src="./src/v.mp4" type="video/mp4" />
       Your browser does not support the video tag.
@@ -97,6 +102,16 @@ _________________¶111111¶¶_____________¶¶¶¶¶¶_____ -->
     <div class="text">
       <h1></h1>
     </div>
+    <div class="modal hidden glow">
+      <div class="vid">
+        <video autoplay controls>
+          <source src="./src/m1.mp4" type="video/webm" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <button class="btn--close-modal">&times;</button>
+    </div>
+    <div class="overlay hidden"></div>
   </body>
   <script type="module" src="src/script.js"></script>
 </html>
