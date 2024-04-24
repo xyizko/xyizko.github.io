@@ -8,7 +8,7 @@ const openModal = function (e) {
   modal.classList.remove("hidden");
   overlay.classList.remove("hidden");
   confetti({
-    particleCount: 1000,
+    particleCount: 5000,
     spread: 200,
     origin: { y: 0.6 },
   });
